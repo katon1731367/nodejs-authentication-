@@ -1,0 +1,98 @@
+// Create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Katon Suwida",
+    "email": "admin@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin"
+}
+
+###
+// Get All Users
+GET http://localhost:5000/users
+
+###
+// Get Single User
+GET http://localhost:5000/users/4369f3de-a638-4452-be0f-ec854600b6c7
+
+###
+// Update a User
+PATCH http://localhost:5000/users/4369f3de-a638-4452-be0f-ec854600b6c7
+Content-Type: application/json
+
+{
+    "name": "John Updated",
+    "email": "john@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}
+
+###
+// Update a User
+DELETE http://localhost:5000/users/c0aa2d83-91f9-41b2-87e7-102b56dfbfd7
+
+###
+// Admin Login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}
+
+###
+// User Login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "john@gmail.com",
+    "password": "123456"
+}
+
+###
+// Me
+get http://localhost:5000/me
+
+###
+// Logout
+DELETE http://localhost:5000/logout
+
+###
+// Get All Products
+GET http://localhost:5000/products
+
+###
+// Get Product
+GET http://localhost:5000/products/e51c68a3-3b62-481c-9ab7-b0a80a45c050
+
+### 
+// Create a Product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Product admin2",
+    "price": 1114,
+    "userId": "b8afa471-e915-429d-92b6-6c3a600af1d5"
+}
+
+### 
+// Update a Product
+PATCH  http://localhost:5000/products/e51c68a3-3b62-481c-9ab7-b0a80a45c050
+Content-Type: application/json
+
+{
+    "name": "Product updated",
+    "price": 1110,
+    "userId": "b8afa471-e915-429d-92b6-6c3a600af1d5"
+}
+
+###
+// Update a User
+DELETE http://localhost:5000/products/e51c68a3-3b62-481c-9ab7-b0a80a45c050
